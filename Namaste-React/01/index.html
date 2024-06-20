@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <!-- **********USING HTML********** -->
+
+    <!-- <div id="root">
+      <h1>Hello World!</h1>
+    </div> -->
+
+    <!-- **********USING JS********** -->
+
+    <!-- <div id="root"></div> -->
+    <!-- <script>
+      const heading = document.createElement("h1");
+      heading.innerHTML = "Hello World From JS!!";
+
+      const root = document.getElementById("root");
+      root.appendChild(heading);
+    </script> -->
+
+    <!-- **********USING REACT********** 
+    FOR SINGLE ELEMENT IN REACT -->
+
+    <!-- <div id="root"></div>
+    
+    <script>
+      const heading = React.createElement(
+        "h1",
+        { id: "heading" },
+        "Hello World from React!!"
+      );
+      // {} -> object in which we can give attributes to our tag
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(heading);
+      // take this object and create a h1 tag which browser understand & put that inside the root
+    </script> -->
+
+    <!-- **********CREATE NESTED ELEMENT IN REACT********** 
+     <div id="parent">
+         <div id="child">
+           <h1></h1>
+           </div>
+       </div> -->
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const parent = React.createElement(
+        "div",
+        { id: "parent" },
+        React.createElement(
+          "div",
+          { id: "child" },
+          [
+            React.createElement("h1", {}, "I am H! tag"),
+            React.createElement("h2", {}, "I am H222 tag"),
+            React.createElement("h3", {}, "I am H3 tag"),
+          ]
+          // if need to add the siblings then in 3rd argument make a array of siblings
+        )
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(parent);
+    </script>
+  </body>
+</html>
