@@ -1,0 +1,31 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is react course",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aakanksha-28/React.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "aakanksha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aakanksha-28/React/issues"
+  },
+  "homepage": "https://github.com/Aakanksha-28/React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
