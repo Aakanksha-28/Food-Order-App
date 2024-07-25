@@ -53,6 +53,7 @@ const Body = () => {
         <div className="search m-4 p-4 ">
           <input
             type="text"
+            data-testid="searchInput"
             className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
@@ -78,7 +79,7 @@ const Body = () => {
               const filteredList = listOfRestaurant.filter(
                 (res) => res.info.avgRating > 4.3
               );
-              setListOfRestaurant(filteredList);
+              setFilteredRestaurantList(filteredList);
             }}
           >
             Top Restaurant
